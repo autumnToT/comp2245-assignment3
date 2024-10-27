@@ -8,6 +8,20 @@ document.addEventListener('DOMContentLoaded', function(){
 	
 	let winStatus = document.querySelector('#status');
 	
+	let newGame = document.querySelector('.btn');
+	newGame.addEventListener('click',function(){
+		for(let i = 0; i < gameState.length; i++){
+			gameState[i] = '';
+		}
+		squares.forEach(square =>{
+			square.textContent = '';
+			square.setAttribute('class','square');
+		});
+		winStatus.textContent = 'Move your mouse over a square and click to play an X or an O.';
+		winStatus.setAttribute('class','status');
+		xIsNext = true;
+	});
+	
 	function chickenDinner(){
 		let winningCombos = [
 			[0,1,2],
