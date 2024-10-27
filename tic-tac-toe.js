@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function(){
 			if(gameState[index] == ''){
 				let currentPlayer = xIsNext ? 'X' : 'O';
 				square.textContent = currentPlayer;
-				square.setAttribute('class','square ${currentPlayer}');
+				//square.setAttribute('class','square ${currentPlayer}');
+				square.setAttribute('class','square '+currentPlayer);
 				gameState[index] = currentPlayer;
 				xIsNext = !xIsNext;
 			}
